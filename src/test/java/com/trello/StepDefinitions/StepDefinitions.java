@@ -69,7 +69,7 @@ public class StepDefinitions {
                     .and().contentType(ContentType.JSON)
                     .queryParam("key", ConfigurationReader.get("key"))
                     .queryParam("token", ConfigurationReader.get("token"))
-                    .queryParam("name", "KartName" + i + "")
+                    .queryParam("name", "KartName" + i + " ")
                     .queryParam("idList", labelId).when().post("/cards");
             assertEquals(200, response.statusCode());
             assertEquals("application/json; charset=utf-8", response.contentType());
